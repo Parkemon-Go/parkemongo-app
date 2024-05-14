@@ -9,7 +9,7 @@
   import "../app.css";
 </script>
 
-<div class="max-w-7xl mx-auto">
+<div class="container max-w-7xl mx-auto">
   <Navbar let:hidden let:toggle>
     <NavBrand href="/">
       <img
