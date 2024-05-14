@@ -1,25 +1,55 @@
 <script>
-    import {fade, fly, slide} from "svelte/transition";
-    import {Button, CloseButton} from "flowbite-svelte";
-    import {createEventDispatcher} from "svelte";
+  import { Button, Drawer } from "flowbite-svelte";
+  import { createEventDispatcher } from "svelte";
+  import { sineIn } from "svelte/easing";
 
-    const dispatch = createEventDispatcher();
-    let drawerOpen;
-    export let transitionParams;
+  let transitionParamsBottom = {
+    y: 320,
+    duration: 200,
+    easing: sineIn,
+  };
+  export let drawerOpen = false;
+
+  $: hidden = !drawerOpen;
 </script>
 
-<div in:fly={transitionParams}  class="relative top-[200px] text-center max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 mx-auto my-5">
-    <div class="relative">
-        <Button class="" color="dark" on:click={() => dispatch('change', {drawerOpen:!drawerOpen})}></Button>
-        <img class="rounded-t-lg w-full" src="/img/route.jpg" alt="Route Bild" />
+<Drawer
+  placement="bottom"
+  width="w-full"
+  transitionType="fly"
+  transitionParams={transitionParamsBottom}
+  bind:hidden
+  id="sidebar8"
+>
+  <div class="p-2">
+    <h5
+      class="underline mb-4 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+    >
+      Südstadt Nürnberg
+    </h5>
+    <img
+      class="rounded-xl shadow-lg w-full"
+      src="/img/route.jpg"
+      alt="Route Bild"
+    />
+    <div class="grid gap-8 grid-cols-2 my-8">
+      <div class="text-gray-700 flex flex-col justify-center items-center">
+        <strong>Länge der Route</strong>
+        <p>2,6 km</p>
+      </div>
+      <div class="text-gray-700 flex flex-col justify-center items-center">
+        <strong>Dauer der Route</strong>
+        <p>36 min</p>
+      </div>
+      <div class="text-gray-700 flex flex-col justify-center items-center">
+        <strong>Type der Route</strong>
+        <p>einfache Strecke</p>
+      </div>
+      <div class="text-gray-700 flex flex-col justify-center items-center">
+        <strong>Punkte </strong>
+        <p>2600</p>
+      </div>
     </div>
-
-    <div class="p-5">
-        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Südstadt Nürnberg</h5>
-        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Länge der Route: 2,6 km</p>
-        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Dauer der Route: 36 min</p>
-        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Type der Route: einfache Strecke</p>
-        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Punkte für die abgelaufene Strecke: 2600</p>
-    </div>
-    <Button class="mb-5" href="/navigation">Route starten</Button>
-</div>
+  </div>
+  <Button class="mb-5 w-full" href="/navigation">Route starten</Button>
+</Drawer>
