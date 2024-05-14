@@ -16,6 +16,10 @@
     FileLinesSolid,
   } from "flowbite-svelte-icons";
 
+  import { Avatar, Tooltip } from 'flowbite-svelte';
+
+  import { Progressbar } from 'flowbite-svelte';
+
   let options: ApexOptions = {
     chart: {
       height: "400px",
@@ -53,14 +57,14 @@
     },
     series: [
       {
-        name: "Clicks",
-        data: [6500, 6418, 6456, 6526, 6356, 6456],
-        color: "#1A56DB",
+        name: "Points",
+        data: [230, 234, 229, 230, 239, 231],
+        color: "#364C38",
       },
       {
-        name: "CPC",
-        data: [6456, 6356, 6526, 6332, 6418, 6500],
-        color: "#7E3AF2",
+        name: "Earnings in €",
+        data: [230, 229, 227, 228, 234, 229],
+        color: "#9CE1A2",
       },
     ],
     legend: {
@@ -96,13 +100,16 @@
   };
 </script>
 
+<Progressbar progress="34" labelOutside="Level 2" color= "green"/>
+
+
 <!-- hier brauchen wir wir ne statistik und ein leaderboard	 -->
 <Card>
   <div class="flex justify-between mb-5">
     <div class="grid gap-4 grid-cols-2">
       <div>
         <h5 class="inline-flex items-center text-gray-500 dark:text-gray-400 leading-none font-normal mb-2">
-          Clicks
+          Points
           <InfoCircleSolid id="b1" class="w-3 h-3 text-gray-400 hover:text-gray-900 dark:hover:text-white cursor-pointer ms-1" />
           <Popover triggeredBy="#b1" class="text-sm text-gray-500 bg-white border border-gray-200 rounded-lg shadow-sm w-72 dark:bg-gray-800 dark:border-gray-600 dark:text-gray-400 z-10">
             <div class="p-3 space-y-2">
@@ -116,11 +123,11 @@
             </div>
           </Popover>
         </h5>
-        <p class="text-gray-900 dark:text-white text-2xl leading-none font-bold">42,3k</p>
+        <p class="text-gray-900 dark:text-white text-2xl leading-none font-bold">846</p>
       </div>
       <div>
         <h5 class="inline-flex items-center text-gray-500 dark:text-gray-400 leading-none font-normal mb-2">
-          CPC
+          Earnings
           <InfoCircleSolid id="b2" class="w-3 h-3 text-gray-400 hover:text-gray-900 dark:hover:text-white cursor-pointer ms-1" />
           <Popover triggeredBy="#b2" class="text-sm text-gray-500 bg-white border border-gray-200 rounded-lg shadow-sm w-72 dark:bg-gray-800 dark:border-gray-600 dark:text-gray-400 z-10">
             <div class="p-3 space-y-2">
@@ -147,6 +154,7 @@
     </div>
   </div>
   <Chart {options} />
+  <!---
   <div class="grid grid-cols-1 items-center border-gray-200 border-t dark:border-gray-700 justify-between mt-2.5">
     <div class="pt-5">
       <Button href="/" class="px-4 py-2.5 text-sm font-medium text-white inline-flex items-center bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 rounded-lg text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
@@ -155,7 +163,29 @@
       </Button>
     </div>
   </div>
+-->
 </Card>
+
+
+
+<div class="flex justify-center">
+  <div class="flex items-center flex-col mr-4">
+    <img src="https://cdn.anisearch.de/images/character/cover/50/50034_400.webp" alt="Profilbild 1" class="w-16 h-16 rounded-full mb-2">
+    <p class="text-center">#1</p>
+  </div>
+  <div class="flex items-center flex-col mr-4">
+    <img src="https://www.listchallenges.com/f/items/93eae3ce-8f56-4394-acea-df025180e030.jpg" alt="Profilbild 2" class="w-16 h-16 rounded-full mb-2">
+    <p class="text-center">#2</p>
+  </div>
+  <div class="flex items-center flex-col mr-4">
+    <img src="https://c02.purpledshub.com/uploads/sites/62/2022/05/psyduck-249ddf6.jpg?webp=1&w=1200" alt="Profilbild 3" class="w-16 h-16 rounded-full mb-2">
+    <p class="text-center">#3</p>
+  </div>
+  <div class="flex items-center flex-col">
+    <img src="https://st3.depositphotos.com/9998432/13335/v/450/depositphotos_133352156-stock-illustration-default-placeholder-profile-icon.jpg" alt="Profilbild 3" class="w-16 h-16 rounded-full mb-2">
+    <p class="text-center">#34.902</p>
+  </div>
+</div>
 
 <style>
   /* CSS-Stile für den Button */
@@ -164,4 +194,5 @@
     color: white; /* Textfarbe des Buttons */
     /* Weitere Stile hier nach Bedarf */
   }
+
 </style>
