@@ -16,7 +16,6 @@
         position: sticky;
         top: 0;
         z-index: 10;
-        background-color: #ffffff;
     }
 
     .navBrand{
@@ -32,7 +31,7 @@
 </style>
 
 <div class="max-w-7xl mx-auto navbar-wrapper">
-  <Navbar let:hidden let:toggle>
+  <Navbar let:hidden let:toggle color="none">
     <NavHamburger on:click={toggle} />
     <NavUl {hidden}>
       <NavLi href="/" active={true}>Home</NavLi>

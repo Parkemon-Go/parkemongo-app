@@ -23,6 +23,8 @@
         top: 0;
         width: 50px;
         height: 50px;
+        margin-top:5px;
+        margin-right:5px;
     }
 </style>
 
