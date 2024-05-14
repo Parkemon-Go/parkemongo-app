@@ -8,6 +8,13 @@ declare global {
 		// interface PageState {}
 		// interface Platform {}
 	}
+
 }
 
 export {};
+export  interface Project {
+	id: string
+	projectName: string
+	distance: string
+	pathLength:string
+}

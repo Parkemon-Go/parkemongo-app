@@ -8,6 +8,5 @@
 </script>
 
 <!-- markup (zero or more items) goes here -->
-<Alert>Achtung Achtung</Alert>
 <Stats />
 <Projects />
