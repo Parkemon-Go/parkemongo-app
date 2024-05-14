@@ -13,7 +13,23 @@
     alt="Strecke"
     src="/img/route.jpg"
   />
-  <span>
-    <Button size="md" color="alternative">Back to Profile</Button>
-  </span>
+  <div class="grid grid-cols-3 my-8 gap-4">
+    <div class="flex flex-col justify-center items-center">
+      <p class="text-xl font-semibold">39</p>
+      <p>min</p>
+    </div>
+    <div class="flex flex-col justify-center items-center">
+      <p class="text-xl font-semibold">2,64</p>
+      <p>km</p>
+    </div>
+    <div class="flex flex-col justify-center items-center">
+      <p class="text-xl font-semibold">59</p>
+      <p>kcal</p>
+    </div>
+    <div class="flex flex-col justify-center items-center col-span-3">
+      <p class="text-2xl font-bold text-green-700">+0,54€</p>
+      <p>Earnings</p>
+    </div>
+  </div>
+  <Button class="mt-4" size="md" color="alternative">Back to Profile</Button>
 </div>

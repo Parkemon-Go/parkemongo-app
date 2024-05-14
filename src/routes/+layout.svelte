@@ -9,14 +9,10 @@
   import "../app.css";
 </script>
 
-<div class="container max-w-7xl mx-auto">
-  <Navbar let:hidden let:toggle>
+<div class="container max-w-7xl flex flex-col mx-auto items-center h-screen">
+  <Navbar class="mb-4" let:hidden let:toggle>
     <NavBrand href="/">
-      <img
-        src="https://flowbite.com/docs/images/logo.svg"
-        class="mr-3 h-6 sm:h-9"
-        alt="Flowbite Logo"
-      />
+      <img src="/img/logo.png" class="mr-3 h-6 sm:h-9" alt="Logo" />
       <span
         class="self-center whitespace-nowrap text-xl font-semibold dark:text-white"
       >
