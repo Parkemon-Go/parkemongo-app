@@ -1,28 +1,38 @@
 <script lang="ts">
   import {
-    NavBrand,
     NavHamburger,
     NavLi,
     NavUl,
     Navbar,
   } from "flowbite-svelte";
   import "../app.css";
+  import {isScrolled} from "$lib/handleScroll";
+
+  "$lib/handleScroll.js";
 </script>
 
-<div class="max-w-7xl mx-auto">
+<style>
+    .navbar-wrapper {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        background-color: #ffffff;
+    }
+
+    .navBrand{
+        position: fixed;
+        right: 25px;
+        top: 20px;
+        transition: right 0.3s ease-in-out;
+    }
+    .greeting-scrolled {
+            right: 50%;
+            transform: translate(50%);
+    }
+</style>
+
+<div class="max-w-7xl mx-auto navbar-wrapper">
   <Navbar let:hidden let:toggle>
-    <NavBrand href="/">
-      <img
-        src="https://flowbite.com/docs/images/logo.svg"
-        class="mr-3 h-6 sm:h-9"
-        alt="Flowbite Logo"
-      />
-      <span
-        class="self-center whitespace-nowrap text-xl font-semibold dark:text-white"
-      >
-        Flowbite
-      </span>
-    </NavBrand>
     <NavHamburger on:click={toggle} />
     <NavUl {hidden}>
       <NavLi href="/" active={true}>Home</NavLi>
@@ -31,6 +41,10 @@
       <NavLi href="/pricing">Pricing</NavLi>
       <NavLi href="/contact">Contact</NavLi>
     </NavUl>
+    <div class="navBrand {$isScrolled ? 'greeting-scrolled' : ''}">
+      Hallo @User
+    </div>
   </Navbar>
-  <slot />
 </div>
+<slot />
+
