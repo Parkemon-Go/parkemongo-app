@@ -20,7 +20,4 @@ import { Button, Card } from "flowbite-svelte";
   {/each}
 </div>
 
-<ProjectCardDrawer></ProjectCardDrawer>
-
-<Button class="my-16" color="primary" on:click={addCard}>Visa hinzufügen</Button
->
+<Button class="my-16" color="primary" on:click={addCard}>Visa hinzufügen</Button>
