@@ -1,9 +1,18 @@
 <script>
     import { Button } from "flowbite-svelte";
+    import {createEventDispatcher} from "svelte";
+
+    const dispatch = createEventDispatcher();
+    let drawerOpen;
 </script>
 
 <div class="text-center max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 mx-auto my-5">
-    <img class="rounded-t-lg w-full" src="/img/route.jpg" alt="Route Bild" />
+    <div class="relative">
+
+        <Button class="absolute left-2 " color="alternative" pill on:click={() => dispatch('change', {drawerOpen:!drawerOpen})}>&larr;</Button>
+        <img class="rounded-t-lg w-full" src="/img/route.jpg" alt="Route Bild" />
+    </div>
+
     <div class="p-5">
         <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Südstadt Nürnberg</h5>
         <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Länge der Route: 2,6 km</p>
