@@ -1,8 +1,8 @@
 <script lang="ts">
-  import { sineIn } from "svelte/transition";
   import ProjectCard from "./ProjectCard.svelte";
   import type { Project } from "../../app";
   import ProjectCardDrawer from "$lib/components/ProjectCardDrawer.svelte";
+    import { sineIn } from "svelte/easing";
 
   const projects: Project[] = [
     {
