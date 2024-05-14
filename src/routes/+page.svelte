@@ -4,5 +4,5 @@
   import Stats from "$lib/components/Stats.svelte";
 </script>
 
-<Stats />
+<!--<Stats />-->
 <Projects />

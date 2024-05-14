@@ -1,15 +1,16 @@
 <script>
-    import { Button } from "flowbite-svelte";
+    import {fade, fly, slide} from "svelte/transition";
+    import {Button, CloseButton} from "flowbite-svelte";
     import {createEventDispatcher} from "svelte";
 
     const dispatch = createEventDispatcher();
     let drawerOpen;
+    export let transitionParams;
 </script>
 
-<div class="text-center max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 mx-auto my-5">
+<div in:fly={transitionParams}  class="relative top-[200px] text-center max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 mx-auto my-5">
     <div class="relative">
-
-        <Button class="absolute left-2 " color="alternative" pill on:click={() => dispatch('change', {drawerOpen:!drawerOpen})}>&larr;</Button>
+        <Button class="" color="dark" on:click={() => dispatch('change', {drawerOpen:!drawerOpen})}></Button>
         <img class="rounded-t-lg w-full" src="/img/route.jpg" alt="Route Bild" />
     </div>
 

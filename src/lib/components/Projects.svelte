@@ -1,5 +1,6 @@
 <script lang="ts">
   import ProjectCard from "./ProjectCard.svelte";
+  import { sineIn } from "svelte/easing";
   import type {Project} from "../../app";
   import ProjectCardDrawer from "$lib/components/ProjectCardDrawer.svelte";
 
@@ -16,6 +17,14 @@
   ];
 
   let drawerOpen: boolean = false
+
+
+  let transitionParams = {
+    y: 520,
+    duration: 300,
+    easing: sineIn,
+  };
+
 </script>
 
 {#each projects as project}
@@ -26,5 +35,5 @@
 
 {#if drawerOpen}
   <!-- Project-karte anzeigen -->
-  <ProjectCardDrawer on:change={() => drawerOpen = !drawerOpen}></ProjectCardDrawer>
+  <ProjectCardDrawer on:change={() => drawerOpen = !drawerOpen} {transitionParams} ></ProjectCardDrawer>
 {/if}
