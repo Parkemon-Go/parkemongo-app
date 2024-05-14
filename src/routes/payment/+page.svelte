@@ -1,5 +1,6 @@
 <script lang="ts">
-  import { Button, Card } from "flowbite-svelte";
+  import ProjectCardDrawer from "$lib/components/ProjectCardDrawer.svelte";
+import { Button, Card } from "flowbite-svelte";
 
   const a = "Visa";
   const b = "Mastercard";
@@ -18,6 +19,8 @@
     >
   {/each}
 </div>
+
+<ProjectCardDrawer></ProjectCardDrawer>
 
 <Button class="my-16" color="primary" on:click={addCard}>Visa hinzufügen</Button
 >
