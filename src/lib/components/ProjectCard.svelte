@@ -1,11 +1,17 @@
 <script lang="ts">
     import {Card} from "flowbite-svelte";
-    import { ArrowUpRightFromSquareOutline } from 'flowbite-svelte-icons';
+    import { createEventDispatcher } from 'svelte';
+    import ProjectCardDrawer from "$lib/components/ProjectCardDrawer.svelte";
     export let project; // wird injected
+    const dispatch = createEventDispatcher();
+    export  let drawerOpen:boolean;
 </script>
 
-
-<Card class="m-2">
+<Card class="m-2" on:click={() => {
+    console.log(drawerOpen)
+    dispatch('change',{drawerOpen: !drawerOpen })
+}
+}>
     <div class="flex ">
         <div class="w-2/3">
             <h5 class="mb-2 text-base font-semibold tracking-tight text-gray-900 dark:text-white">{project.projectName}</h5>
@@ -23,4 +29,4 @@
 </Card>
 <!--Südstadt Nürnberg |
 // entf. 800 m | länge 1 km -->
-<!-- Project-karte anzeigen -->
+
