@@ -11,5 +11,5 @@
         <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Type der Route: einfache Strecke</p>
         <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Punkte für die abgelaufene Strecke: 2600</p>
     </div>
-    <Button class="mb-5">Route starten</Button>
+    <Button class="mb-5" href="/navigation">Route starten</Button>
 </div>
