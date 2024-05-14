@@ -20,5 +20,5 @@
 <UserIcon />
 <div style="margin-top: 200px"></div>
 <Stats />
-<Hr>Aktuelle Projekte</Hr>
+
 <Projects />

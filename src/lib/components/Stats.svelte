@@ -104,8 +104,8 @@
 
 
 <!-- hier brauchen wir wir ne statistik und ein leaderboard	 -->
-<Card color="none" shadow={false}>
-  <div class="my-4 w-full">
+<Card color="none" shadow={false} border = {false}>
+  <div class="my-4 w-full mb-10">
     <strong>Level 2 </strong>
     <Progressbar progress="34"></Progressbar>
   </div>

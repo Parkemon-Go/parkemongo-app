@@ -4,15 +4,15 @@
 
 <style>
     .user-icon {
-        width: 100px; /* Adjust as needed */
-        height: 100px; /* Adjust as needed */
+        width: 200px; /* Adjust as needed */
+        height: 200px; /* Adjust as needed */
         border-radius: 100%;
         border: 2px solid gray; /* Add border style */
         overflow: hidden;
         object-fit: cover;
         transition: right 0.3s ease-in-out, top 0.3s ease-in-out, width 0.3s ease-in-out, height 0.3s ease-in-out;
         position: fixed;
-        top: 100px;
+        top: 70px;
         right: 50%;
         transform: translateX(50%); /* Center horizontally */
         z-index: 11;
