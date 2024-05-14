@@ -28,9 +28,13 @@
             right: 50%;
             transform: translate(50%);
     }
+    .nav-scrolled {
+        background-color: #eFEBDC;
+        transition: background-color 0.3s ease-in-out;
+    }
 </style>
 
-<div class="max-w-7xl mx-auto navbar-wrapper">
+<div class="max-w-7xl mx-auto navbar-wrapper { $isScrolled ? 'nav-scrolled' : ''}">
   <Navbar let:hidden let:toggle color="none">
     <NavHamburger on:click={toggle} />
     <NavUl {hidden}>
