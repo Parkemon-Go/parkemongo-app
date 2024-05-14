@@ -27,9 +27,7 @@
     <NavUl {hidden}>
       <NavLi href="/" active={true}>Home</NavLi>
       <NavLi href="/payment">Payment</NavLi>
-      <NavLi href="/services">Services</NavLi>
-      <NavLi href="/pricing">Pricing</NavLi>
-      <NavLi href="/contact">Contact</NavLi>
+      <NavLi href="/user">Profile</NavLi>
     </NavUl>
   </Navbar>
   <slot />
