@@ -1,5 +1,5 @@
 <!-- Dashboard -->
-<script>
+<script lang="ts">
   import { Alert } from "flowbite-svelte";
 
   // your script goes here
