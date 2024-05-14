@@ -22,10 +22,11 @@
 
   let options: ApexOptions = {
     chart: {
-      height: "400px",
+      height: "100px",
       maxWidth: "100%",
       type: "line",
       fontFamily: "Inter, sans-serif",
+      background: "#EFEBDC",
       dropShadow: {
         enabled: false,
       },
@@ -58,12 +59,12 @@
     series: [
       {
         name: "Points",
-        data: [230, 234, 229, 230, 239, 231],
+        data: [230, 230, 229, 230, 232, 231],
         color: "#364C38",
       },
       {
         name: "Earnings in €",
-        data: [230, 229, 227, 228, 234, 229],
+        data: [230, 229, 227, 228, 230, 229],
         color: "#9CE1A2",
       },
     ],
@@ -100,16 +101,20 @@
   };
 </script>
 
-<Progressbar progress="34" labelOutside="Level 2" color= "green"/>
 
 
 <!-- hier brauchen wir wir ne statistik und ein leaderboard	 -->
-<Card>
+<Card color="none" shadow={false}>
+  <div class="my-4 w-full">
+    <strong>Level 2 </strong>
+    <Progressbar progress="34"></Progressbar>
+  </div>
   <div class="flex justify-between mb-5">
     <div class="grid gap-4 grid-cols-2">
       <div>
         <h5 class="inline-flex items-center text-gray-500 dark:text-gray-400 leading-none font-normal mb-2">
           Points
+          <!----
           <InfoCircleSolid id="b1" class="w-3 h-3 text-gray-400 hover:text-gray-900 dark:hover:text-white cursor-pointer ms-1" />
           <Popover triggeredBy="#b1" class="text-sm text-gray-500 bg-white border border-gray-200 rounded-lg shadow-sm w-72 dark:bg-gray-800 dark:border-gray-600 dark:text-gray-400 z-10">
             <div class="p-3 space-y-2">
@@ -122,12 +127,14 @@
                 <ChevronRightOutline class="w-2 h-2 ms-1.5" /></A>
             </div>
           </Popover>
+        -->
         </h5>
         <p class="text-gray-900 dark:text-white text-2xl leading-none font-bold">846</p>
       </div>
       <div>
         <h5 class="inline-flex items-center text-gray-500 dark:text-gray-400 leading-none font-normal mb-2">
           Earnings
+          <!---
           <InfoCircleSolid id="b2" class="w-3 h-3 text-gray-400 hover:text-gray-900 dark:hover:text-white cursor-pointer ms-1" />
           <Popover triggeredBy="#b2" class="text-sm text-gray-500 bg-white border border-gray-200 rounded-lg shadow-sm w-72 dark:bg-gray-800 dark:border-gray-600 dark:text-gray-400 z-10">
             <div class="p-3 space-y-2">
@@ -138,6 +145,7 @@
               <A href="/">Read more <ChevronRightOutline class="w-2 h-2 ms-1.5" /></A>
             </div>
           </Popover>
+        -->
         </h5>
         <p class="text-gray-900 dark:text-white text-2xl leading-none font-bold">$5.40</p>
       </div>
@@ -166,7 +174,7 @@
 -->
 </Card>
 
-
+<!----
 
 <div class="flex justify-center">
   <div class="flex items-center flex-col mr-4">
@@ -186,13 +194,8 @@
     <p class="text-center">#34.902</p>
   </div>
 </div>
-
+-->
 <style>
-  /* CSS-Stile für den Button */
-  #progress {
-    background-color: blue; /* Hintergrundfarbe des Buttons */
-    color: white; /* Textfarbe des Buttons */
-    /* Weitere Stile hier nach Bedarf */
-  }
+
 
 </style>
