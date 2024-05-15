@@ -2,62 +2,71 @@
   import ProjectCard from "./ProjectCard.svelte";
   import type { Project } from "../../app";
   import ProjectCardDrawer from "$lib/components/ProjectCardDrawer.svelte";
-    import { sineIn } from "svelte/easing";
+  import { sineIn } from "svelte/easing";
 
   const projects: Project[] = [
     {
       id: "1",
       projectName: "Südstadt Nürnberg",
-      distance: "entf. 800 m",
-      pathLength: "Länge 2,6 km",
+      distance: "800 m",
+      pathLength: "2,6 km",
+      url: "/img/route.jpg",
     },
     {
       id: "2",
       projectName: "Nordstadt Nürnberg",
-      distance: "entf. 2 km",
-      pathLength: "Länge 0,7 km",
+      distance: "2 km",
+      pathLength: "0,7 km",
+      url: "/img/route.jpg",
     },
     {
       id: "3",
       projectName: "Eibach Nürnberg",
-      distance: "entf. 8 km",
-      pathLength: "Länge 2 km",
+      distance: "8 km",
+      pathLength: "2 km",
+      url: "/img/route.jpg",
     },
     {
       id: "4",
       projectName: "St. Johannes Nürnberg",
-      distance: "entf. 1,5 km",
-      pathLength: "Länge 3 km",
+      distance: "1,5 km",
+      pathLength: "3 km",
+      url: "/img/route.jpg",
     },
     {
       id: "5",
       projectName: "Gostenhof Nürnberg",
-      distance: "entf. 2,5 km",
-      pathLength: "Länge 4,5 km",
+      distance: "2,5 km",
+      pathLength: "4,5 km",
+      url: "/img/route.jpg",
     },
     {
       id: "6",
       projectName: "Schoppershof Nürnberg",
-      distance: "entf. 3,5 km",
-      pathLength: "Länge 2,4 km",
+      distance: "3,5 km",
+      pathLength: "2,4 km",
+      url: "/img/route.jpg",
     },
     {
       id: "7",
       projectName: "Hummelstein Nürnberg",
-      distance: "entf. 3,5 km",
-      pathLength: "Länge 2,4 km",
+      distance: "3,5 km",
+      pathLength: "2,4 km",
+      url: "/img/route.jpg",
     },
     {
       id: "8",
       projectName: "Gebitzenhof Nürnberg",
-      distance: "entf. 3,5 km",
-      pathLength: "Länge 2,4 km",
+      distance: "3,5 km",
+      pathLength: "2,4 km",
+      url: "/img/route.jpg",
     },
     {
       id: "9",
       projectName: "Rosenau Nürnberg",
-      distance: "entf. 3,5 km",
-      pathLength: "Länge 2,4 km",
+      distance: "3,5 km",
+      pathLength: "2,4 km",
+      url: "/img/route.jpg",
     },
   ];
 

@@ -7,7 +7,8 @@
 </script>
 
 <Card
-  class="m-2"
+  class="m-2 bg-light"
+  color="none"
   on:click={() => {
     console.log(drawerOpen);
     dispatch("click");
@@ -20,19 +21,20 @@
       >
         {project.projectName}
       </h5>
-      <div class="flex">
+      <div class="flex gap-4">
         <p class="mb-3 font-normal text-gray-500 dark:text-gray-400 mr-1">
-          {project.distance} |
+          {project.distance} away
         </p>
+        <p class="text-gray-300">|</p>
         <p class="mb-3 font-normal text-gray-500 dark:text-gray-400">
-          {project.pathLength}
+          {project.pathLength} long
         </p>
       </div>
     </div>
     <div class="w-1/3 pl-8">
       <img
-        class="rounded-lg rounded w-16 h-16 object-cover"
-        src="/img/route.jpg"
+        class="rounded-lg h-full object-cover"
+        src={project.url}
         alt="Path thumbnail"
       />
     </div>

@@ -31,5 +31,5 @@
       <p>Earnings</p>
     </div>
   </div>
-  <Button class="mt-4" size="md" color="alternative">Back to Profile</Button>
+  <Button class="mt-4" size="md" color="primary">Back to Profile</Button>
 </div>
