@@ -6,7 +6,7 @@
   ("$lib/handleScroll.js");
 </script>
 
-<div class="max-w-sm navbar-wrapper {$isScrolled ? 'nav-scrolled' : ''}">
+<div class="navbar-wrapper {$isScrolled ? 'nav-scrolled' : ''}">
   <Navbar let:hidden let:toggle color="none">
     <NavHamburger on:click={toggle} />
     <NavUl {hidden}>
@@ -23,6 +23,7 @@
 
 <style>
   .navbar-wrapper {
+    width: 100%;
     position: sticky;
     top: 0;
     z-index: 10;
