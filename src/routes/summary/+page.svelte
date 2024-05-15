@@ -3,10 +3,10 @@
   import { Confetti } from "svelte-confetti";
 </script>
 
-<div class="left-1/2 absolute z-10">
-  <Confetti x={[-1, 1]} fallDistance="50vh" rounded></Confetti>
-</div>
-<div class="w-3/4 mx-auto flex flex-col h-full">
+<div class="w-3/4 mx-auto flex flex-col h-full justify-center mt-20">
+  <div class="left-1/2 absolute z-10">
+    <Confetti x={[-1, 1]} fallDistance="50vh" rounded></Confetti>
+  </div>
   <h1 class="text-xl underline mb-4 font-semibold">Südstadt Nürnberg</h1>
   <img
     class="rounded-xl shadow-lg border-2"
