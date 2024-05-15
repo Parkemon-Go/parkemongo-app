@@ -4,21 +4,23 @@
   import Stats from "$lib/components/Stats.svelte";
   import { Hr } from "flowbite-svelte";
   import UserIcon from "$lib/components/UserIcon.svelte";
-  import { onMount } from 'svelte';
+  import { onMount } from "svelte";
   // your script goes here
-  import { handleScroll } from "$lib/handleScroll.js";
+  import { handleScroll, isScrolled } from "$lib/handleScroll.js";
 
   onMount(() => {
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   });
 </script>
 
+<div class="flex flex-col items-center">
+  <div class={$isScrolled ? "" : "mb-48"}>
+    <UserIcon />
+  </div>
+  <Stats />
 
-<UserIcon />
-<div style="margin-top: 200px"></div>
-<Stats />
-
-<Projects />
+  <Projects />
+</div>
