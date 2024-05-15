@@ -27,7 +27,7 @@
       <p>kcal</p>
     </div>
     <div class="flex flex-col justify-center items-center col-span-3">
-      <p class="text-2xl font-bold text-green-700">+0,54€</p>
+      <p class="text-2xl font-bold text-green-700">+5,54€</p>
       <p>Earnings</p>
     </div>
   </div>
