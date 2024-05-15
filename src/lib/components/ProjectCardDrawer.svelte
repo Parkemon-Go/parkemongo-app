@@ -48,7 +48,7 @@
       </div>
       <div class="text-gray-500 flex flex-col justify-center items-center">
         <strong>Punkte </strong>
-        <p>2600</p>
+        <p>4900</p>
       </div>
     </div>
   </div>
