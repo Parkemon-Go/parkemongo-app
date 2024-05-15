@@ -18,3 +18,16 @@ export interface Project {
   pathLength: string;
   url: string;
 }
+
+export interface Scan {
+  id: string;
+  lat: number;
+  long: number;
+  project_id: number;
+  created_at: string;
+  vehicle_type: number;
+  vehicle_plate: number;
+  vehicle_color: string;
+  vehicle_make: string;
+  vehicle_model: string;
+}
