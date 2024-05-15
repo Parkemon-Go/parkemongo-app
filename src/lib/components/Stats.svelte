@@ -1,5 +1,5 @@
 <script lang="ts" src="https://cdn.jsdelivr.net/npm/apexcharts">
-    import type { ApexOptions } from "apexcharts";
+  import type { ApexOptions } from "apexcharts";
   import {
     Chart,
     Card,
@@ -16,9 +16,9 @@
     FileLinesSolid,
   } from "flowbite-svelte-icons";
 
-  import { Avatar, Tooltip } from 'flowbite-svelte';
+  import { Avatar, Tooltip } from "flowbite-svelte";
 
-  import { Progressbar } from 'flowbite-svelte';
+  import { Progressbar } from "flowbite-svelte";
 
   let options: ApexOptions = {
     chart: {
@@ -59,12 +59,12 @@
     series: [
       {
         name: "Points",
-        data: [230, 230, 229, 230, 232, 231],
+        data: [21, 12, 6, 0, 21, 1, 12],
         color: "#364C38",
       },
       {
         name: "Earnings in €",
-        data: [230, 229, 227, 228, 230, 229],
+        data: [2.1, 1.2, 0.6, 0, 2.1, 0.1, 1.2],
         color: "#9CE1A2",
       },
     ],
@@ -101,10 +101,8 @@
   };
 </script>
 
-
-
 <!-- hier brauchen wir wir ne statistik und ein leaderboard	 -->
-<Card color="none" shadow={false} border = {false}>
+<Card color="none" shadow={false} border={false}>
   <div class="my-4 w-full mb-10">
     <strong>Level 2 </strong>
     <Progressbar progress="34"></Progressbar>
@@ -112,7 +110,9 @@
   <div class="flex justify-between mb-5">
     <div class="grid gap-4 grid-cols-2">
       <div>
-        <h5 class="inline-flex items-center text-gray-500 dark:text-gray-400 leading-none font-normal mb-2">
+        <h5
+          class="inline-flex items-center text-gray-500 dark:text-gray-400 leading-none font-normal mb-2"
+        >
           Points
           <!----
           <InfoCircleSolid id="b1" class="w-3 h-3 text-gray-400 hover:text-gray-900 dark:hover:text-white cursor-pointer ms-1" />
@@ -129,10 +129,16 @@
           </Popover>
         -->
         </h5>
-        <p class="text-gray-900 dark:text-white text-2xl leading-none font-bold">846</p>
+        <p
+          class="text-gray-900 dark:text-white text-2xl leading-none font-bold"
+        >
+          943000
+        </p>
       </div>
       <div>
-        <h5 class="inline-flex items-center text-gray-500 dark:text-gray-400 leading-none font-normal mb-2">
+        <h5
+          class="inline-flex items-center text-gray-500 dark:text-gray-400 leading-none font-normal mb-2"
+        >
           Earnings
           <!---
           <InfoCircleSolid id="b2" class="w-3 h-3 text-gray-400 hover:text-gray-900 dark:hover:text-white cursor-pointer ms-1" />
@@ -147,11 +153,17 @@
           </Popover>
         -->
         </h5>
-        <p class="text-gray-900 dark:text-white text-2xl leading-none font-bold">$5.40</p>
+        <p
+          class="text-gray-900 dark:text-white text-2xl leading-none font-bold"
+        >
+          € 7.32
+        </p>
       </div>
     </div>
     <div>
-      <Button color="light" class="px-3 py-2">Last week<ChevronDownOutline class="w-2.5 h-2.5 ms-1.5" /></Button>
+      <Button color="light" class="px-3 py-2"
+        >Last week<ChevronDownOutline class="w-2.5 h-2.5 ms-1.5" /></Button
+      >
       <Dropdown class="w-40">
         <DropdownItem>Yesterday</DropdownItem>
         <DropdownItem>Today</DropdownItem>
@@ -196,6 +208,4 @@
 </div>
 -->
 <style>
-
-
 </style>
