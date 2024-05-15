@@ -11,6 +11,6 @@
     alt="Route Bild"
   />
   <div class="flex justify-center my-4">
-    <Button>Route beenden</Button>
+    <Button href="/summary">Route beenden</Button>
   </div>
 </div>
