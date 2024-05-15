@@ -43,6 +43,7 @@
 	"dependencies": {
 		"@popperjs/core": "^2.11.8",
 		"apexcharts": "^3.49.1",
+		"flowbite-svelte-blocks": "^1.1.1",
 		"leaflet": "^1.9.4",
 		"tailwind-merge": "^2.3.0"
 	}

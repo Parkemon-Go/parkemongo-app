@@ -33,7 +33,7 @@
     </div>
     <div class="w-1/3 pl-8">
       <img
-        class="rounded-lg h-full object-cover"
+        class="rounded-lg h-full max-h-16 object-cover"
         src={project.url}
         alt="Path thumbnail"
       />
